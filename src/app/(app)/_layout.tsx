@@ -4,6 +4,7 @@ import * as React from 'react';
 import { Pressable, Text } from '@/components/ui';
 import {
   Feed as FeedIcon,
+  InteractionIcon,
   Settings as SettingsIcon,
   Style as StyleIcon,
 } from '@/components/ui/icons';
@@ -29,6 +30,16 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <FeedIcon color={color} />,
           headerRight: () => <CreateNewPostLink />,
           tabBarButtonTestID: 'feed-tab',
+        }}
+      />
+
+      <Tabs.Screen
+        name="interaction"
+        options={{
+          title: 'Interaction',
+          headerShown: false,
+          tabBarIcon: ({ color }) => <InteractionIcon color={color} />,
+          tabBarButtonTestID: 'interaction-tab',
         }}
       />
 
